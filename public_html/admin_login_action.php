@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     $servername = getenv('IP');
     $user = getenv('C9_USER');
@@ -9,8 +10,8 @@
     $conn = mysqli_connect($servername, $user, $pass, $db);
     
     if(isset($_POST['admin_login'])) {
-        $username = $_POST['admin_username'];
-        $password = $_POST['admin_password'];
+        echo $username = mysqli_real_escape_string($conn, $_POST['admin_username']);
+        echo $password = mysqli_real_escape_string($conn, $_POST['admin_password']);
         
         $query = "select * from `admin_credentials` where admin_name = '" . $username . "' and admin_password = '" . $password . "';";
         $result = mysqli_query($conn, $query);
@@ -19,10 +20,10 @@
             header('Location: index.php?m=Incorrect User Details Entered, please try again');
         }
         else {
+            $_SESSION['admin_username'] = $username;
             header('Location: admin_homepage.php');
         }
 
     }
-    $username = $_POST['usernmae']
         
 ?>

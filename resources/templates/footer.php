@@ -1,6 +1,6 @@
     <footer>
-        <div class="container-fluid align-center">
-            <p class style>© 2015 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a> </p>
+        <div class="d-flex justify-content-center">
+            <p class style>© 2017 Copyright: <a href="https://www.linkedin.com/in/kaushal-gautam-4a209a115/"> Kaushal Gautam </a> </p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

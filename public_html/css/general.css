@@ -78,3 +78,7 @@ span.psw {
        width: 100%;
     }
 }
+
+#admin-jumbotron {
+    text-align: center;
+}

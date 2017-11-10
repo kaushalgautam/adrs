@@ -2,28 +2,24 @@
 
     $servername = getenv('IP');
     $user = getenv('C9_USER');
-    $password = "";
+    $pass = "";
+    $db = "c9";
     
     // Create connection
-    $conn = mysqli_connect($servername, $user, $password);
+    $conn = mysqli_connect($servername, $user, $pass, $db);
     
-    if (!$conn)
-    {
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-    
-    if(isset($_POST['admin_login'])) 
-    {
-
-        $username = $_POST['admin_username'];
-        $password = $_POST['admin_password'];
-
-        $query = "select * from `admin_credentials`";
+    if(isset($_POST['alumni_login'])) {
+        $username = $_POST['alumni_username'];
+        $password = $_POST['alumni_password'];
+        
+        echo $query = "select * from `alumni_credentials` where alumni_username = '" . $username . "' and alumni_password = '" . $password . "';";
         $result = mysqli_query($conn, $query);
         
-        if (mysqli_num_rows($result) > 0) {
-            // header('Location: index.php?m=Incorrect Alumni Details Entered, please try again');
-            echo $query;
+        if(mysqli_num_rows($result) == 0) {
+            header('Location: index.php?m=Incorrect Alumni Details Entered, please try again');
+        }
+        else {
+            header('Location: alumni_homepage.php');
         }
 
     }
