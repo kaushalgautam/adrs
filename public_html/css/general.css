@@ -1,17 +1,21 @@
-/*#left-panel {*/
-/*    background: #868e9691;*/
-/*    padding: 20px; */
-/*    width: 200px;*/
-/*    height: 150px; */
-/*}*/
-/*#right-panel {*/
-/*    border-left-color: white;*/
-/*    border-left: 10px;*/
-/*    background: #868e9691;*/
-/*    padding: 20px; */
-/*    width: 200px;*/
-/*    height: 150px; */
-/*}*/
+
+
+a:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:focus {
+    color: inherit;
+    text-decoration: inherit;
+    
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
 #title {
     padding-bottom: 20px;
 }
@@ -81,4 +85,8 @@ span.psw {
 
 #admin-jumbotron {
     text-align: center;
+}
+
+.list-group {
+    padding: 20px 20px 20px 20px;
 }

@@ -9,10 +9,10 @@
     $conn = mysqli_connect($servername, $user, $pass, $db);
     
     if(isset($_POST['alumni_login'])) {
-        $username = $_POST['alumni_username'];
+        $id = $_POST['alumni_roll'];
         $password = $_POST['alumni_password'];
         
-        echo $query = "select * from `alumni_credentials` where alumni_username = '" . $username . "' and alumni_password = '" . $password . "';";
+        echo $query = "select * from `alumni_credentials` where alumni_roll = '" . $id . "' and alumni_password = '" . $password . "';";
         $result = mysqli_query($conn, $query);
         
         if(mysqli_num_rows($result) == 0) {

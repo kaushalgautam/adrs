@@ -10,8 +10,8 @@
     $conn = mysqli_connect($servername, $user, $pass, $db);
     
     if(isset($_POST['admin_login'])) {
-        echo $username = mysqli_real_escape_string($conn, $_POST['admin_username']);
-        echo $password = mysqli_real_escape_string($conn, $_POST['admin_password']);
+        $username = mysqli_real_escape_string($conn, $_POST['admin_username']);
+        $password = mysqli_real_escape_string($conn, $_POST['admin_password']);
         
         $query = "select * from `admin_credentials` where admin_name = '" . $username . "' and admin_password = '" . $password . "';";
         $result = mysqli_query($conn, $query);

@@ -40,10 +40,10 @@
         
         <div class = "d-flex justify-content-center">
             <div class="list-group">
-                <a href="show_alumni.php" class="list-group-item list-group-item-action active">
-                Show Aluni
+                <a href="admin_show_alumni.php" class="list-group-item list-group-item-action active">
+                Show Alumni
                 </a>
-                <a href="show_reg_req.php" class="list-group-item list-group-item-action">Show pending registration requests</a>
+                <a href="admin_reg_show.php" class="list-group-item list-group-item-action">Show pending registration requests</a>
                 <a href="" class="list-group-item list-group-item-action">Morbi leo risus</a>
                 <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
                 <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
